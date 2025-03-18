@@ -14,7 +14,11 @@
 <span id="presentation-du-projet"></span>
 **Sujet choisi**
 
+Scanner de ports
+
 **Présentation**
+
+L'objet est l'utilisation de Nmap et Netcat pour la detection  des ports d'un serveur à partir d'un client, récupérer le plus d'informations et en déduire les failles de sécurité et les attaques possibles.
 
 **Objectifs finaux**
 
