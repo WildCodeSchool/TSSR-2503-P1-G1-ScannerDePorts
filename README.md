@@ -16,11 +16,25 @@
 
 Scanner de ports
 
-**Présentation**
+##**Présentation**
 
-L'objet est l'utilisation de Nmap et Netcat pour la detection  des ports d'un serveur à partir d'un client, récupérer le plus d'informations et en déduire les failles de sécurité et les attaques possibles.
+L'objet est l'utilisation de Nmap et Netcat pour la detection des ports de deux serveurs à partir d'un client, récupérer le plus d'informations et en déduire les failles de sécurité et les attaques possibles.
 
-**Objectifs finaux**
+##**Objectifs finaux**
+
+_Tâche principale :_
+
+Scanner les ports d’un serveur à partir d’un client
+
+En déduire les failles de sécurité et les attaques possibles
+
+Récupérer le plus d’informations
+
+Utilisation des logiciels Nmap et Netcat
+
+_Objectif secondaire :_
+
+Création de profils de scan personnalisés
 
 
 # 📜 Introduction
@@ -32,10 +46,9 @@ L'objet est l'utilisation de Nmap et Netcat pour la detection  des ports d'un se
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| membre 1 | PO         | -        |
-| membre 2 | SM         | -        |
-| membre 3 | Technicien | -        |
-| membre 4 | Technicien | -        |
+| Killian Castillo | PO         | -        |
+| Alan Coeurjoly | SM         | -        |
+| Eric Martienne | Technicien | -        |
 
 **Sprint 2**
 
@@ -50,14 +63,31 @@ L'objet est l'utilisation de Nmap et Netcat pour la detection  des ports d'un se
 <span id="choix-techniques"></span>
 **Matériel**
 
+-1 VM windows serveur 2022
+
+-1 VM Debian12 serveur
+
+-1 VM Ubuntu client
+
 **Logiciel**
 
+-NMAP
+
+-NETCAT
 
 # 🧗 Difficultés rencontrées
 <span id="difficultes-rencontrees"></span>
+
+-connection réseau interne
+
+-définition des types de scan, et des ports pour definir les vulnérabilités potentiels
 
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
+
+-Veilles technologiques sur les vulnérabilités des services.
+
+-Automatisations pour plusieur serveurs dans un script
