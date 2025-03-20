@@ -21,6 +21,7 @@ Port 22 : Secure Shell (SSH). SSH est l'un des nombreux protocoles de tunneling 
 Port 25 : historiquement, SMTP (Simple Mail Transfer Protocol, protocole simple de transfert de courrier). Le SMTP est utilisé pour le courrier électronique.
 
 Port 53 : DNS (Domain Name System). Le DNS est un processus essentiel du réseau Internet moderne. Il fait correspondre les noms de domaines lisibles par l'homme aux adresses IP lisibles par la machine afin de permettre aux utilisateurs de charger des sites web et des applications sans avoir à mémoriser une longue liste d'adresses IP.
+
 Port 80 : HTTP (Hypertext Transfer Protocol, protocole de transfert hypertexte). Le protocole HTTP rend Internet possible.
 
 Port 123 : NTP (Network Time Protocol, protocole de temps réseau). Le NTP permet aux horloges des ordinateurs de se synchroniser entre elles. Il s'agit là d'un processus essentiel pour le chiffrement.
@@ -97,6 +98,25 @@ L'analyse TOP NULL est également une technique d'analyse très astucieuse. Elle
 
 # 4. Utilisation de Netcat
 <span id="utilisation de netcat"></span>
+Netcat (`nc`) est un outil en ligne de commande très puissant sous Linux utilisé pour l'écoute et l'envoi de données sur le réseau.  
+
+Écouter sur un port spécifique (Mode serveur)
+nc -lvp 1234  
+
+-l : Écoute (listen) sur un port donné.  
+-v : Mode "verbose" (affiche plus d'informations).  
+-p : Spécifie le port (ici 1234).  
+
+Se connecter à un serveur (Mode client) 
+nc -v 192.168.1.100 1234  
+
+- 192.168.1.100 : Adresse IP de la machine cible.  
+- 1234 : Port utilisé pour la connexion.  
+
+Envoyer un fichier à une machine distante
+**Sur la machine émettrice :**  
+cat fichier.txt | nc 192.168.1.100 1234  
+
 
 # 5. FAQ
 <span id="faq"></span>
