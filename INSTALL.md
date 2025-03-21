@@ -107,7 +107,7 @@ Enfin, pour vérifier que nmap ait bien été installé, il est possible de le v
 ```nmap --version ```
 
 Voici la sortie standart obtenue. Par la même occasion, la version 7.94SVN de Nmap sera celle utilisée tout au long des documents.
-<img src="nmap_version" alt="nmap_version" width="700"/> 
+<img src="https://github.com/WildCodeSchool/TSSR-2503-P1-G1-ScannerDePorts/blob/main/Ressources/Nmap%20version.png?raw=true" alt="nmap_version" width="700"/> 
 
    2. Netcat
 
