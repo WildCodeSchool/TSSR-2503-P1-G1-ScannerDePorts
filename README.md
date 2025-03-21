@@ -46,9 +46,9 @@ Création de profils de scan personnalisés
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| Killian Castillo | PO         | -        |
-| Alan Coeurjoly | SM         | -        |
-| Eric Martienne | Technicien | -        |
+| Killian Castillo | PO         | -  Faire le lien avec le client et vérifier la conformité du produit avec les exigences clients, installer les VMs et logiciels en local et première rédaction du INSTALL.md|
+| Alan Coeurjoly | SM         | - Vérifier que chaque menbre de l'équipe à tous le matériel, installer les VMs et logiciels et première rédaction du USER_GUIDE.md        |
+| Eric Martienne | Technicien | - Installer les VMs et logiciels et première redaction du README.md       |
 
 **Sprint 2**
 
@@ -57,23 +57,22 @@ Création de profils de scan personnalisés
 | membre 1 | Technicien | -        |
 | membre 2 | Technicien | -        |
 | membre 3 | PO         | -        |
-| membre 4 | SM         | -        |
 
 # ⚙️ Choix techniques
 <span id="choix-techniques"></span>
 **Matériel**
 
--1 VM windows serveur 2022
+-1 VM windows serveur 2022 avec 2CPU et 4096 MO
 
--1 VM Debian12 serveur
+-1 VM Debian12 serveur avec 1CPU et 2048 MO
 
--1 VM Ubuntu client
+-1 VM Ubuntu client avec 1CPU et 2048 MO
 
 **Logiciel**
 
--NMAP
+-NMAP version
 
--NETCAT
+-NETCAT version
 
 # 🧗 Difficultés rencontrées
 <span id="difficultes-rencontrees"></span>
@@ -85,6 +84,9 @@ Création de profils de scan personnalisés
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 
+-Partage des VMs
+-Documents et ressources en lignes
+
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
 
@@ -92,4 +94,4 @@ Création de profils de scan personnalisés
 
 -Partage des VMs
 
--Automatisations pour plusieurs serveurs dans un script
+-Automatisations pour plusieurs scans sur plusieurs serveurs dans un script
