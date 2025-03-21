@@ -58,8 +58,7 @@ Nous allons aller dans les Paramètres; puis dans la rubrique Réseau; puis dans
 
 Dans la rubrique IPv4, nous allons insérer une adresse IP et un masque. Dans notre cas, nous choisirons 172.16.10.10 et 255.255.255.0. Ce qui devrait te donner ça :  
 
-<img src="https://github.com/WildCodeSchool/TSSR-2503-P1-G1-ScannerDePorts/blob/main/Ressources/Screen%20adresse%20IP%20Ubuntu.png" alt="Adressage_IPv4_Ubuntu" width="500"/> 
-   
+![dfsdfs](Ressources/screen_network_interfaces_debian.png)
           b. Serveur Debian  
          
 Ici, le plus simple est de se connecter directement avec le compte root.  
