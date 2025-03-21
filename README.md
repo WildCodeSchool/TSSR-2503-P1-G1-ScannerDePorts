@@ -88,6 +88,6 @@ Création de profils de scan personnalisés
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
 
--Veilles technologiques sur les vulnérabilités des services.
+-Vigilance technique sur les vulnérabilités des services.
 
--Automatisations pour plusieur serveurs dans un script
+-Automatisations pour plusieurs serveurs dans un script
