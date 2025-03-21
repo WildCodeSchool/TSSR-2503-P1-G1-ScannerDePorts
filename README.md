@@ -90,4 +90,6 @@ Création de profils de scan personnalisés
 
 -Vigilance technique sur les vulnérabilités des services.
 
+-Partage des VMs
+
 -Automatisations pour plusieurs serveurs dans un script
