@@ -1,131 +1,105 @@
-## Sommaire
-1. [Pour comprendre](#pour-comprendre)
-2. [Nmap et Netcat](#nmap-et-netcat)
-3. [Utilisation de Nmap](#utilisation-de-nmap)
-4. [Utilisation de Netcat](#utilisation-de-netcat)
-5. [FAQ](#faq)
+# Guide Utilisateur : Nmap et Netcat
 
-# 1. Pour comprendre
-<span id="pour-comprendre"></span>
-Avant d'utiliser Nmap et Netcet, il est essentiel de comprendre les concepts liés aux ports, aux protocoles et au scanning.
-1.1 Ports et protocoles
-Un port est un point virtuel où les connexions réseau commencent et se terminent. Basés sur logiciel, ils sont gérés par le système d'exploitation d'un ordinateur. Chaque port est associé à un processus ou à un service spécifique. Les ports permettent aux ordinateurs de différencier facilement les différents types de trafic. Les e-mails, par exemple, sont acheminés vers un port différent de celui des pages web, même si les deux atteignent l'ordinateur via la même connexion Internet. Ces ports sont eux mêmes identifiés par des protocoles. Ils définissent la manière dont les données sont échangées entre machines (TCP,UDP,ICMP,etc)
+## 1. Pour Comprendre
 
-Quels sont les différents numéros de port ?
-Il existe 65 535 numéros de port possibles, mais tous ne sont pas utilisés couramment. Voici quelques-uns des ports les plus couramment utilisés, ainsi que le protocole réseau qui leur est associé :
+Avant d'utiliser Nmap et Netcat, il est essentiel de comprendre certains concepts liés aux ports, aux protocoles et au scanning.
 
-Ports 20 et 21 : File Transfer Protocol (FTP). Le protocole FTP permet de transférer des fichiers entre un client et un serveur.
+### 1.1 Ports et Protocoles
 
-Port 22 : Secure Shell (SSH). SSH est l'un des nombreux protocoles de tunneling qui créent des connexions réseau sécurisées.
+Un port est un point virtuel où les connexions réseau commencent et se terminent. Chaque port est associé à un processus ou à un service spécifique et permet de différencier les types de trafic. Voici quelques-uns des ports les plus courants et les protocoles associés :
 
-Port 25 : historiquement, SMTP (Simple Mail Transfer Protocol, protocole simple de transfert de courrier). Le SMTP est utilisé pour le courrier électronique.
+- **Port 20 et 21** : **FTP (File Transfer Protocol)** – Permet de transférer des fichiers entre un client et un serveur.
+- **Port 22** : **SSH (Secure Shell)** – Crée des connexions réseau sécurisées.
+- **Port 25** : **SMTP (Simple Mail Transfer Protocol)** – Utilisé pour l'envoi de mails.
+- **Port 53** : **DNS (Domain Name System)** – Permet de résoudre les noms de domaine en adresses IP.
+- **Port 80** : **HTTP (Hypertext Transfer Protocol)** – Permet de transférer des pages web.
+- **Port 123** : **NTP (Network Time Protocol)** – Permet de synchroniser les horloges des ordinateurs.
+- **Port 179** : **BGP (Border Gateway Protocol)** – Utilisé pour le routage entre les réseaux Internet.
+- **Port 443** : **HTTPS (HTTP Secure)** – Version sécurisée de HTTP, utilisée pour la navigation sécurisée.
+- **Port 500** : **ISAKMP (Internet Security Association and Key Management Protocol)** – Gère les connexions sécurisées IPsec.
+- **Port 587** : **SMTP sécurisé** – Utilisé pour l'envoi d'emails de manière sécurisée.
+- **Port 3389** : **RDP (Remote Desktop Protocol)** – Permet d'accéder à un bureau distant.
 
-Port 53 : DNS (Domain Name System). Le DNS est un processus essentiel du réseau Internet moderne. Il fait correspondre les noms de domaines lisibles par l'homme aux adresses IP lisibles par la machine afin de permettre aux utilisateurs de charger des sites web et des applications sans avoir à mémoriser une longue liste d'adresses IP.
+### 1.2 Scanning
 
-Port 80 : HTTP (Hypertext Transfer Protocol, protocole de transfert hypertexte). Le protocole HTTP rend Internet possible.
+Le scanning est une technique utilisée pour détecter et analyser les hôtes actifs, les services en cours d'exécution et les ports ouverts sur un réseau.
 
-Port 123 : NTP (Network Time Protocol, protocole de temps réseau). Le NTP permet aux horloges des ordinateurs de se synchroniser entre elles. Il s'agit là d'un processus essentiel pour le chiffrement.
+## 2. Utilisation de Nmap
 
-Port 179 : BGP (Border Gateway Protocol, protocole de passerelle en bordure). Le BGP est essentiel pour établir des itinéraires efficaces entre les grands réseaux qui composent Internet (ces grands réseaux sont appelés systèmes autonomes). Les systèmes autonomes utilisent le BGP pour diffuser les adresses IP qu'ils contrôlent.
+### 2.1 C'est quoi Nmap ?
 
-Port 443 : HTTPS (HTTP Secure, HTTP sécurisé). Le HTTPS est la version sécurisée et chiffrée du HTTP. Tout le trafic web HTTPS passe par le port 443. Les services réseau qui utilisent le HTTPS pour le chiffrement, comme le DNS over HTTPS, se connectent également à ce port.
+[Nmap](https://nmap.org) ("Network Mapper") est un logiciel de cartographie de réseaux qui s’est imposé comme l’un des outils de découverte gratuits les plus populaires du marché. C’est désormais l’un des principaux outils de cartographie utilisés par les administrateurs réseau. Ce programme peut être utilisé pour trouver des hôtes actifs sur un réseau, effectuer un balayage de ports, des balayages ping, ainsi que détecter le système d’exploitation d’une machine et la version d’un logiciel.
 
-Port 500 : ISAKMP (Internet Security Association and Key Management Protocol, protocole de gestion des clés et des associations de sécurité pour Internet). Il fait partie du processus de mise en place des connexions sécurisées IPsec.
+À la base, Nmap est un outil d’analyse de réseau qui exploite les paquets IP pour identifier tous les appareils connectés à un réseau et fournir des informations sur les services et les systèmes d’exploitation qu’ils exécutent. Ce programme est le plus souvent utilisé via une interface en ligne de commande (bien que des interfaces graphiques soient également disponibles) et est compatible avec de nombreux systèmes d’exploitation
 
-Port 587 : SMTP moderne et sécurisé qui utilise le chiffrement.
+Nmap est un logiciel intuitif et les administrateurs système d’autres programmes connaissent généralement les outils qu’il fournit. Son principal avantage réside dans l’intégration d’un large éventail de ces outils dans un seul et même programme. Vous n’êtes donc pas obligé de passer d’un outil de surveillance réseau à un autre.
 
-Port 3389 : RDP (Remote Desktop Protocol, protocole de bureau à distance). Le protocole RDP permet aux utilisateurs de se connecter à distance à leur ordinateur de bureau depuis un autre appareil.
+Pour l’utiliser, vous devez connaître les interfaces en ligne de commande. La plupart des utilisateurs expérimentés savent écrire des scripts afin d’automatiser les tâches courantes, mais ce n’est pas nécessaire pour la surveillance de base du réseau. C'est ce que nous allons voir dans la partie suivante.
 
-1.2 Scanning
-Le scanning est une technique utilisée pour détecter et analyser les hôtes (machines) actifs, les services en cours d'execution et les ports ouverts sur un réseau.
+### 2.2 Utilisation de Nmap
 
-# 2. Nmap et Netcat
-<span id="nmap-et-netcat"></span>
-Nmap (« Network Mapper ») est un outil open source d'exploration réseau et d'audit de sécurité. Il a été conçu en 1997 par Fyodor. Il est crée pour rapidement scanner de grands réseaux, mais il fonctionne aussi très bien sur une cible unique. Nmap innove en utilisant des paquets IP bruts (raw packets) pour déterminer quels sont les hôtes actifs sur le réseau, quels services (y compris le nom de l'application et la version) ces hôtes offrent, quels systèmes d'exploitation (et leurs versions) ils utilisent, quels types de dispositifs de filtrage/pare-feux sont utilisés, ainsi que des douzaines d'autres caractéristiques.
+Les commandes courantes de Nmap peuvent être exécutées via une ligne de commande simple, avec de nombreux raccourcis pour automatiser les tâches courantes.
 
-Netcat, également abrégé nc, est un utilitaire permettant d'ouvrir des connexions réseau, que ce soit UDP ou TCP. Il est conçu pour être incorporé aisément dans un large éventail d'applications. En raison de sa polyvalence, netcat est aussi appelé le « couteau suisse du TCP/IP ».
+### 2.3 Commandes de Base
 
+- **Scan par IP ou nom d'hôte** :
+  ```bash
+  nmap -sp <IP/nom_de_cible>
+  
+- **Scan de ping** :
+  ```bash
+  nmap -sp 172.16.10.05/24
 
-# 3. Utilisation de Nmap
-<span id="utilisation-de-base"></span>
+- **Scan de système d'exploitation** :
+  ```bash
+  nmap -O
+  
+- **Scan de ports populaires** :
+  ```bash
+  nmap --top-ports 20
+  
+- **Scan de ports spécifiques ou de tous les ports** :
+  ```bash
+  nmap -p 1-65535 localhost
 
-La plupart des fonctions courantes de Nmap peuvent être exécutées à l'aide d'une seule commande, et le programme utilise également un certain nombre de commandes de « raccourci » qui peuvent être utilisées pour automatiser les tâches courantes.
+- **Sauvegarde des résultats dans un fichier texte** :
+  ```bash
+  nmap -oN output.txt
+  
+- **Sauvegarde des résultats dans un fichier texte** :
+  ```bash
+  nmap -oX output.txt
+  
+### 2.4 Scan de ports
 
-Scan par IP ou par nom d'hôte
-nmap -sp <IP/nom de la cible>
+- **Scan TCP SYN (sS) : Scan rapide, sans établir de connexion complète** :
+  ```bash
+  nmap -sS <IP>
+  
+- **Scan TCP Connect (sT) : Plus lent, mais plus fiable, car il établit une connexion complète** :
+  ```bash
+  nmap -sT <IP>
+  
+- **Scan UDP (sU) : Utilisé pour scanner des ports UDP comme DNS, SNMP, etc** :
+  ```bash
+  nmap -sU <IP>
 
-Scan de ping
-# nmap -sp 172.16.10.05/24
+- **Scan SCTP INIT (sY) : Utilisé pour les services SS7 et SIGTRAN** :
+  ```bash
+  nmap -sY <IP>
+  
+- **Scan NULL (sN) : Exploite une faille dans le système TCP pour tester les ports sans les interroger directement** :
+  ```bash
+  nmap -sN <IP>
+  
+## 3 Utilisation de Netcat
 
-Scan de systeme d'exploitation
-# nmap -0 <IP de la cible>
+### 3.1 C'est quoi Netcat ?
 
-Scan des ports les plus populaires
-# nmap --top-ports 20 <IP de la cible>
+[Netcat](https://nc110.sourceforge.net) (ou `nc`) est un utilitaire permettant d'ouvrir des connexions réseau TCP/UDP. Souvent appelé le "couteau suisse du TCP/IP", il est très polyvalent et utilisé pour l'écoute et l'envoi de données.
 
-Scan de ports spectifiques ou la totalité sur le serveur local ou à distance.
-# nmap -p 1-65535 localhost/remote
+L'utilitaire Netcat propose un large éventail de commandes pour gérer les réseaux et surveiller le flux des données de trafic entre les systèmes. Les réseaux informatiques, dont Internet, sont basés sur l'épine dorsale des protocoles TCP (Transmission Control Protocol) et UDP (User Datagram Protocol). Il s'agit d'un outil gratuit et simple à utiliser avec Wireshark, spécifiquement pour l'analyse de paquets réseau. La première version de Netcat a été lancée en 1995 et l'utilitaire a été maintes fois mis à jour depuis.
 
-Sortie vers un fichier
-Si vous souhaitez enregistrer les résultats de vos analyses Nmap dans un fichier.
+Même s'il peut être utile à toute équipe informatique, Netcat est un outil particulièrement bien adapté à la croissance des services réseau gérés en interne et du cloud computing. Les administrateurs réseau et système doivent pouvoir rapidement déterminer comment fonctionne leur réseau et quels types d'activités s'y déroulent.
 
-# -oN output.txt
-Pour enregistrer les résultats dans un fichier texte
-
-# -oX output.xml
-Pour enregistrer les résultats au format XML.
-
-Si vous souhaitez faire une analysé avancée, vous pouvez par exemple faire :
-
-Il existe plusieurs façons d'effectuer un scan de port avec Nmap. Les plus courantes sont :
-
-Le plus basique de ces scans est le scan sS TCP SYN, qui fournit à la plupart des utilisateurs toutes les informations nécessaires. Il analyse des milliers de ports par seconde et, comme il n'établit pas de connexion TCP, il n'éveille pas les soupçons.
-# sS TCP SYN scan
-
-La principale alternative à ce type d'analyse est l'analyse TCP Connect, qui interroge activement chaque hôte et demande une réponse. Ce type d'analyse est plus long qu'une analyse SYN, mais peut fournir des informations plus fiables.
-# sT TCP connexion scan
-
-L'analyse UDP fonctionne de manière similaire à l'analyse de connexion TCP, mais utilise des paquets UDP pour analyser les ports DNS, SNMP et DHCP. Ces ports sont les plus fréquemment ciblés par les pirates ; ce type d'analyse est donc un outil utile pour détecter les vulnérabilités.
-# analyses sU UDP
-
-L'analyse SCTP INIT couvre un ensemble différent de services : SS7 et SIGTRAN. Ce type d'analyse peut également être utilisé pour éviter toute suspicion lors de l'analyse d'un réseau externe, car il ne complète pas le processus SCTP.
-# sY SCTP INIT scan
-
-L'analyse TOP NULL est également une technique d'analyse très astucieuse. Elle exploite une faille du système TCP permettant de révéler l'état des ports sans les interroger directement, ce qui permet de consulter leur état même lorsqu'ils sont protégés par un pare-feu.
-# sN TCP NULL
-
-
-
-# 4. Utilisation de Netcat
-<span id="utilisation de netcat"></span>
-Netcat (`nc`) est un outil en ligne de commande très puissant sous Linux utilisé pour l'écoute et l'envoi de données sur le réseau.  
-
-Écouter sur un port spécifique (Mode serveur)
-nc -lvp 1234  
-
--l : Écoute (listen) sur un port donné.  
--v : Mode "verbose" (affiche plus d'informations).  
--p : Spécifie le port (ici 1234).  
-
-Se connecter à un serveur (Mode client) 
-nc -v 192.168.1.100 1234  
-
-- 192.168.1.100 : Adresse IP de la machine cible.  
-- 1234 : Port utilisé pour la connexion.  
-
-Envoyer un fichier à une machine distante
-**Sur la machine émettrice :**  
-cat fichier.txt | nc 192.168.1.100 1234  
-
-
-# 5. FAQ
-<span id="faq"></span>
-
-Est-ce que Nmap est légal ?
-
-Est-ce que Netcat est légal ?
-
-Est-ce qu'il existe des alternatives à Nmap et Netcat ?
-
-Combien coûtent Nmap et Netcat ?
-
+Netcat fonctionne comme un outil de back-end qui permet d'effectuer un balayage et une écoute des ports. Vous pouvez d'autre part l'utiliser pour un transfert direct de fichiers ou comme un backdoor dans d'autres systèmes en réseau. Netcat est enfin un outil souple car il peut être intégré à des scripts destinés à réaliser des tâches plus lourdes.
