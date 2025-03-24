@@ -40,7 +40,7 @@ Pour l’utiliser, vous devez connaître les interfaces en ligne de commande. La
 
 Les commandes courantes de Nmap peuvent être exécutées via une ligne de commande simple, avec de nombreux raccourcis pour automatiser les tâches courantes.
 
-### 2.3 Commandes de Base
+### 2.3 Commandes de base Nmap
 
 - **Scan par IP ou nom d'hôte** :
   ```bash
@@ -96,10 +96,33 @@ Les commandes courantes de Nmap peuvent être exécutées via une ligne de comma
 
 ### 3.1 C'est quoi Netcat ?
 
-[Netcat](https://nc110.sourceforge.net) (ou `nc`) est un utilitaire permettant d'ouvrir des connexions réseau TCP/UDP. Souvent appelé le "couteau suisse du TCP/IP", il est très polyvalent et utilisé pour l'écoute et l'envoi de données.
+[Netcat](https://www.it-connect.fr/a-la-decouverte-de-lutilitaire-netcat-sur-linux/) (ou `nc`) est un utilitaire permettant d'ouvrir des connexions réseau TCP/UDP. Souvent appelé le "couteau suisse du TCP/IP", il est très polyvalent et utilisé pour l'écoute et l'envoi de données.
 
 L'utilitaire Netcat propose un large éventail de commandes pour gérer les réseaux et surveiller le flux des données de trafic entre les systèmes. Les réseaux informatiques, dont Internet, sont basés sur l'épine dorsale des protocoles TCP (Transmission Control Protocol) et UDP (User Datagram Protocol). Il s'agit d'un outil gratuit et simple à utiliser avec Wireshark, spécifiquement pour l'analyse de paquets réseau. La première version de Netcat a été lancée en 1995 et l'utilitaire a été maintes fois mis à jour depuis.
 
 Même s'il peut être utile à toute équipe informatique, Netcat est un outil particulièrement bien adapté à la croissance des services réseau gérés en interne et du cloud computing. Les administrateurs réseau et système doivent pouvoir rapidement déterminer comment fonctionne leur réseau et quels types d'activités s'y déroulent.
 
 Netcat fonctionne comme un outil de back-end qui permet d'effectuer un balayage et une écoute des ports. Vous pouvez d'autre part l'utiliser pour un transfert direct de fichiers ou comme un backdoor dans d'autres systèmes en réseau. Netcat est enfin un outil souple car il peut être intégré à des scripts destinés à réaliser des tâches plus lourdes.
+
+### 3.2 Commandes de base Netcat
+
+- **Scan
+
+
+## 4. FAQ
+
+**Est-ce que Nmap est légal ?** 
+
+Oui, Nmap est un outil légitime pour l'audit de sécurité et l'exploration réseau. Cependant, son utilisation sans autorisation peut être illégale, selon la législation locale.
+
+**Est-ce que Netcat est légal ?**  
+
+Netcat est un outil polyvalent utilisé pour les connexions réseau. Comme Nmap, son utilisation peut être légale ou illégale, selon le contexte et la permission donnée.
+
+**Est-ce qu'il existe des alternatives à Nmap et Netcat ?**  
+
+Oui, des alternatives comme Angry IP Scanner ou Zenmap pour Nmap et Socat pour Netcat existent.
+
+**Combien coûtent Nmap et Netcat ?**  
+
+Nmap et Netcat sont tous deux des outils open source gratuits.
