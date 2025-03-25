@@ -151,7 +151,7 @@ Plage de ports : vous pouvez spécifier une plage de ports auxquels Netcat se co
 
 Du coup, cela ouvre de nombreuses perspectives d’applications. En effet, grâce à ce mécanisme, on peut facilement transférer de l’information quelle qu’elle soit, au travers du réseau d’entreprise.
 
-**b) Transfert d'information**  
+**b) Transfert d'informations**  
 
 - **Envoyer un fichier** :
     ```bash
@@ -176,7 +176,8 @@ Du coup, cela ouvre de nombreuses perspectives d’applications. En effet, grâc
     ```bash
     nc -zv site.com 80-84
 
-**d) Shells backdoor Netcat** (Risque de sécurité ! À utiliser avec prudence.)
+**d) Shells backdoor Netcat** _(Risque de sécurité ! À utiliser avec prudence.)_
+
 Une porte dérobée (de l'anglais backdoor) est une fonctionnalité inconnue de l'utilisateur légitime, qui donne un accès secret au logiciel.
 
 - **Exécute un shell sous Linux** :
