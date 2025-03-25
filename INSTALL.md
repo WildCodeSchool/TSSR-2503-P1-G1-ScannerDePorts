@@ -8,8 +8,7 @@
          1.2.c [Windows Serveur 2022](#Windows-Serveur-2022)
       
    1.3 [Paramétrage du réseau](#Paramétrage-du-réseau)  
-         1.3.a [Client Ubuntu](#ubuntu)  
-      1.3.a Sous-sous-élément 2.1.2  
+         1.3.a [Client Ubuntu](#ubuntu)   
          1.3.b [Serveur Debian](#Serveur-Debian)  
          1.3.c [Windows Serveur 2022](#Windows-Serveur-2022)
 ### 2. [Installation sur le client](#installation-sur-le-client)  
