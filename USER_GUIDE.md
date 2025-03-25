@@ -24,6 +24,11 @@ Un port est un point virtuel où les connexions réseau commencent et se termine
 
 Le scanning est une technique utilisée pour détecter et analyser les hôtes actifs, les services en cours d'exécution et les ports ouverts sur un réseau.
 
+### 1.3 Le débogage
+
+Le débogage (ou debugging en anglais) est le processus d’identification, d’analyse et de correction des erreurs (ou bugs) dans un programme informatique, un script ou un système. Le débogage est essentiel pour corriger les erreurs en identifiant et réparant les dysfonctionnements, améliorer les performances en optimisant le code, assurer la sécurité en détectant les vulnérabilités et comprendre le fonctionnement du programme en analysant son comportement. 
+
+
 ## 2. Utilisation de Nmap
 
 ### 2.1 C'est quoi Nmap ?
@@ -104,9 +109,82 @@ Même s'il peut être utile à toute équipe informatique, Netcat est un outil p
 
 Netcat fonctionne comme un outil de back-end qui permet d'effectuer un balayage et une écoute des ports. Vous pouvez d'autre part l'utiliser pour un transfert direct de fichiers ou comme un backdoor dans d'autres systèmes en réseau. Netcat est enfin un outil souple car il peut être intégré à des scripts destinés à réaliser des tâches plus lourdes.
 
-### 3.2 Commandes de base Netcat
+### 3.2 Utilisation de Netcat
 
-- **Scan
+Les commandes courantes de Netcat peuvent être exécutées via une ligne de commande simple, avec de nombreux raccourcis pour automatiser les tâches courantes.
+
+### 3.3 Commandes de base Netcat
+
+Dans les commandes qui vont suivrent, nous retrouverons plusieurs fois deux options importantes qui sont détaillées ci-dessous.
+
+**Mode d'écoute ( -l )** : cette option indique à Netcat d'écouter les connexions entrantes. Par exemple, _nc -l 1234_ obligera Netcat à écouter les connexions sur le _port 1234_.
+
+**Mode verbeux ( -v )** : cette option permet à Netcat de fournir plus d'informations sur la connexion. C'est utile pour le débogage.
+
+Plage de ports : vous pouvez spécifier une plage de ports auxquels Netcat se connectera ou écoutera. Par exemple, _nc -l 1234-1240_ fera écouter Netcat sur les _ports 1234 à 1240_.
+
+**a) Mise en communication**  
+
+- **La façon la plus simple d’utiliser Netcat est d’ouvrir une communication en mode serveur grâce à la commande suivante** :
+  ```bash
+$ nc -l -p <n° de port TCP>
+
+- **Du côté du client, on peut alors ouvrir une autre session et exécuter la commande suivante** :
+  ```bash
+$ nc @IPServeur <n° de port>
+
+- **REMARQUE : si l’on doit communiquer via un port UDP, il suffit d’ajouter l’option -u aux commandes côté serveur** :
+  ```bash
+$ nc -l -u -p <n° de port TCP>
+
+- **Et côté client** :
+  ```bash
+$ nc -u @IPServeur <n° de port>
+
+- **Ainsi, par exemple, pour ouvrir une communication via le port TCP/8000, sur un serveur dont l’adresse principale est 192.168.1.3, on devra exécuter la commande en mode serveur suivante** :
+  ```bash
+$ nc -l -p 8000
+
+- **Ensuite, il faudra ouvrir une autre session qui servira de client afin d’exécuter l’instruction suivante** :
+  ```bash
+nc 192.168.1.3 8000
+
+Du coup, cela ouvre de nombreuses perspectives d’applications. En effet, grâce à ce mécanisme, on peut facilement transférer de l’information quelle qu’elle soit, au travers du réseau d’entreprise.
+
+**b) Transfert d'information**  
+
+- **Envoyer un fichier** :
+  ```bash
+nc <IP_du_destinataire> 1234 < fichier.txt
+
+- **Recevoir un fichier** :
+  ```bash
+nc -l -p 1234 > fichier.txt
+
+**c) Balayage de ports avec Netcat**
+
+- **Balayage d'un port unique** :
+  ```bash
+nc -zv site.com 80 –
+
+- **Balayage d'un ensemble de ports séparés** :
+  ```bash
+nc -zv hostname.com 80 84 – balayage d'un ensemble de ports séparés
+
+nc -zv site.com 80-84 – balayage d'une plage de ports
+
+**d) Shells backdoor Netcat**
+– **Exécute un shell sous Linux** :
+  ```bash
+nc -l -p [port] -e /bin/bash
+
+- **Exécute un shell sur Netcat pour Windows** :
+  ```bash
+nc -l -p [port] -e cmd.exe
+
+- **Liste de toutes les commandes disponibles dans Netcat** :
+  ```bash
+  nc-help
 
 
 ## 4. FAQ
