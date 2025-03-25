@@ -176,7 +176,8 @@ Du coup, cela ouvre de nombreuses perspectives d’applications. En effet, grâc
     ```bash
     nc -zv site.com 80-84
 
-**d) Shells backdoor Netcat**
+**d) Shells backdoor Netcat** (Risque de sécurité ! À utiliser avec prudence.)
+Une porte dérobée (de l'anglais backdoor) est une fonctionnalité inconnue de l'utilisateur légitime, qui donne un accès secret au logiciel.
 
 - **Exécute un shell sous Linux** :
     ```bash
