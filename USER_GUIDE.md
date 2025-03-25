@@ -191,7 +191,6 @@ Une porte dérobée (de l'anglais backdoor) est une fonctionnalité inconnue de 
     ```bash
     nc-help
 
-
 ## 4. FAQ
 
 **Est-ce que Nmap est légal ?** 
