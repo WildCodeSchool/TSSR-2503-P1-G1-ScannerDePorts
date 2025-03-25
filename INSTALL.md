@@ -59,7 +59,7 @@ Enchaînons avec le Windows serveur. Dans Server Manager, allons dans la rubriqu
 
 ![IP_windows](Ressources/windows_serveur_IP.png)  
 
-  #### 3. Paramétrage du réseau  
+  #### 1.3 Paramétrage du réseau  
 <span id="Paramétrage-du-réseau"></span>
    ##### 1.3.a Client Ubuntu  
 <span id="ubuntu_reseau"></span>
@@ -71,7 +71,7 @@ Maintenant, établissons la connexion entre les machines. Pour cela, nous allons
    ##### 1.3.b Serveur Debian  
 <span id="Serveur-Debian_reseau"></span>
 Nous allons procéder à la même chose sur le serveur Debian. Pour cela, même commande (le sudo n'est pas nécessaire si vous êtes sur le compte root) ```nano /etc/hosts```  
-VOus pouvez maintenant ajouter les adresses IP des machines de votre futur réseau. 
+Vous pouvez maintenant ajouter les adresses IP des machines de votre futur réseau. 
 
 ![reseau_debian](Ressources/Screen_reseau_debian.png)  
    ##### 1.3.c Windows Serveur 2022  
