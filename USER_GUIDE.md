@@ -127,27 +127,27 @@ Plage de ports : vous pouvez spécifier une plage de ports auxquels Netcat se co
 
 - **La façon la plus simple d’utiliser Netcat est d’ouvrir une communication en mode serveur grâce à la commande suivante** :
     ```bash
-$ nc -l -p <n° de port TCP>
+    nc -l -p <n° de port TCP>
 
 - **Du côté du client, on peut alors ouvrir une autre session et exécuter la commande suivante** :
     ```bash
-$ nc @IPServeur <n° de port>
+    nc @IPServeur <n° de port>
 
 - **REMARQUE : si l’on doit communiquer via un port UDP, il suffit d’ajouter l’option -u aux commandes côté serveur** :
     ```bash
-$ nc -l -u -p <n° de port TCP>
+    nc -l -u -p <n° de port TCP>
 
 - **Et côté client** :
     ```bash
-$ nc -u @IPServeur <n° de port>
+    nc -u @IPServeur <n° de port>
 
 - **Ainsi, par exemple, pour ouvrir une communication via le port TCP/8000, sur un serveur dont l’adresse principale est 192.168.1.3, on devra exécuter la commande en mode serveur suivante** :
     ```bash
-$ nc -l -p 8000
+    nc -l -p 8000
 
 - **Ensuite, il faudra ouvrir une autre session qui servira de client afin d’exécuter l’instruction suivante** :
     ```bash
-nc 192.168.1.3 8000
+    nc 192.168.1.3 8000
 
 Du coup, cela ouvre de nombreuses perspectives d’applications. En effet, grâce à ce mécanisme, on peut facilement transférer de l’information quelle qu’elle soit, au travers du réseau d’entreprise.
 
@@ -155,40 +155,40 @@ Du coup, cela ouvre de nombreuses perspectives d’applications. En effet, grâc
 
 - **Envoyer un fichier** :
     ```bash
-$ nc <IP_du_destinataire> 1234 < fichier.txt
+    nc <IP_du_destinataire> 1234 < fichier.txt
 
 - **Recevoir un fichier** :
     ```bash
-$ nc -l -p 1234 > fichier.txt
+    nc -l -p 1234 > fichier.txt
 
 **c) Balayage de ports avec Netcat**
 
 - **Balayage d'un port unique** :
     ```bash
-$ nc -zv site.com 80 –
+    nc -zv site.com 80 –
 
 
 - **Balayage d'un ensemble de ports séparés** :
     ```bash
-$ nc -zv hostname.com 80 84
+    nc -zv hostname.com 80 84
 
 - **Balayage d'une plage de ports** :
     ```bash
-$ nc -zv site.com 80-84
+    nc -zv site.com 80-84
 
 **d) Shells backdoor Netcat**
 
 - **Exécute un shell sous Linux** :
     ```bash
-$ nc -l -p [port] -e /bin/bash
+    nc -l -p [port] -e /bin/bash
 
 - **Exécute un shell sous Linux** :
     ```bash    
-$ nc -l -p [port] -e cmd.exe
+    nc -l -p [port] -e cmd.exe
 
 - **Liste de toutes les commandes disponibles dans Netcat** : 
     ```bash
-$ nc-help
+    nc-help
 
 
 ## 4. FAQ
