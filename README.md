@@ -56,7 +56,7 @@ Création de profils de scan personnalisés
 | -------- | ---------- | -------- |
 | Killian Castillo | Technicien | - Finir rédaction de INSTALL.md, rédaction du script; tests et présentation|
 | Alan Coeurjoly | PO | - Faire le lien avec le client et vérifier la conformité du produit avec les exigences clients, finalisation le USER_GUIDE.md; tests et présentation |
-| Eric Martienne| SM         | - Vérifier que chaque menbre de l'équipe à tous le matériel, finaliser  le README.md; un script avorté ; "relecture de tous les documents" test et présentation |       |
+| Eric Martienne| SM         | - Vérifier que chaque menbre de l'équipe à tous le matériel, finaliser  le README.md; un script avorté ; test et présentation |       |
 
 # ⚙️ Choix techniques
 <span id="choix-techniques"></span>
@@ -84,14 +84,14 @@ Création de profils de scan personnalisés
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 
--Partage des vituals machines
--Documents et ressources en lignes
+- Partage des vituals machines
+- Documents et ressources en lignes
 
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
 
--Vigilance technique sur les vulnérabilités des services.
+- Vigilance technique sur les vulnérabilités des services.
 
--Partage des VMs
+- Partage des VMs
 
--Automatisations pour plusieurs scans sur plusieurs serveurs dans un script
+- Automatisations pour plusieurs scans sur plusieurs serveurs dans un script
