@@ -49,53 +49,53 @@ Les commandes courantes de Nmap peuvent être exécutées via une ligne de comma
 
 - **Scan par IP ou nom d'hôte** :
   ```bash
-  nmap -sp <IP/nom_de_cible>
+  nmap -sp <IP/nom_de_cible>  
   
 - **Scan de ping** :
   ```bash
-  nmap -sp 172.16.10.05/24
+  nmap -sp 172.16.10.5/24  
 
 - **Scan de système d'exploitation** :
   ```bash
-  nmap -O
+  sudo nmap -O <IP>  
   
-- **Scan de ports populaires** :
+- **Scan de ports populaires (exemple 20)** :
   ```bash
-  nmap --top-ports 20
+  nmap --top-ports 20 <IP>  
   
 - **Scan de ports spécifiques ou de tous les ports** :
   ```bash
-  nmap -p 1-65535 localhost
+  nmap -p 1-65535 <IP>  
 
 - **Sauvegarde des résultats dans un fichier texte** :
   ```bash
-  nmap -oN output.txt
+  nmap -oN output.txt <IP>  
   
-- **Sauvegarde des résultats dans un fichier texte** :
+- **Sauvegarde des résultats dans un fichier sous format XML** :
   ```bash
-  nmap -oX output.txt
+  nmap -oX output.xml <IP>  
   
 ### 2.4 Scan de ports
 
 - **Scan TCP SYN (sS) : Scan rapide, sans établir de connexion complète** :
   ```bash
-  nmap -sS <IP>
+  sudo nmap -sS <IP>  
   
 - **Scan TCP Connect (sT) : Plus lent, mais plus fiable, car il établit une connexion complète** :
   ```bash
-  nmap -sT <IP>
+  nmap -sT <IP>  
   
 - **Scan UDP (sU) : Utilisé pour scanner des ports UDP comme DNS, SNMP, etc** :
   ```bash
-  nmap -sU <IP>
+  sudo nmap -sU <IP>  
 
 - **Scan SCTP INIT (sY) : Utilisé pour les services SS7 et SIGTRAN** :
   ```bash
-  nmap -sY <IP>
+  sudo nmap -sY <IP>  
   
 - **Scan NULL (sN) : Exploite une faille dans le système TCP pour tester les ports sans les interroger directement** :
   ```bash
-  nmap -sN <IP>
+  sudo nmap -sN <IP>  
   
 ## 3 Utilisation de Netcat
 
