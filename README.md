@@ -10,7 +10,7 @@
 - [💡 Solutions trouvées](#solutions-trouvees)
 - [🚀 Améliorations possibles](#ameliorations-possibles)
 
-# 🎯 Présentation du projet
+# 🎯 **Présentation du projet**
 <span id="presentation-du-projet"></span>
 **Sujet choisi**
 
@@ -60,7 +60,7 @@ Création de profils de scan personnalisés
 
 # ⚙️ **Choix techniques**
 <span id="choix-techniques"></span>
-**Matériel**
+_**Matériel**_
 
 - 1 virtual machine sous VirtualBox **Windows serveur 2022** avec 2CPU et 4096 MO
 
@@ -68,7 +68,7 @@ Création de profils de scan personnalisés
 
 - 1 virtual machine sous VirtualBox **Ubuntu** client avec 1CPU et 2048 MO
 
-**Logiciel**
+_**Logiciel**_
 
 - **NMAP** version
 
@@ -79,12 +79,12 @@ Création de profils de scan personnalisés
 
 - connection réseau interne
 
-- définition des types de scan, et des ports pour definir les vulnérabilités potentiels
+- définition des types de scan, et des ports pour définir les vulnérabilités potentiels
 
 # 💡 **Solutions trouvées**
 <span id="solutions-trouvees"></span>
 
-- Partage des vituals machines
+- Partage des virtuals machines
 - Documents et ressources en lignes
 
 # 🚀 **Améliorations possibles**
