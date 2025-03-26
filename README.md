@@ -77,9 +77,9 @@ Création de profils de scan personnalisés
 # 🧗 Difficultés rencontrées
 <span id="difficultes-rencontrees"></span>
 
--connection réseau interne
+- connection réseau interne
 
--définition des types de scan, et des ports pour definir les vulnérabilités potentiels
+- définition des types de scan, et des ports pour definir les vulnérabilités potentiels
 
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
