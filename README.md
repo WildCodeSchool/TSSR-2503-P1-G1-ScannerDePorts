@@ -62,17 +62,17 @@ Création de profils de scan personnalisés
 <span id="choix-techniques"></span>
 **Matériel**
 
--1 virtual machine sous VirtualBox windows serveur 2022 avec 2CPU et 4096 MO
+- 1 virtual machine sous VirtualBox **Windows serveur 2022** avec 2CPU et 4096 MO
 
--1 virtual machine sous VirtualBox Debian12 serveur avec 1CPU et 2048 MO
+- 1 virtual machine sous VirtualBox **Debian12** serveur avec 1CPU et 2048 MO
 
--1 virtual machine sous VirtualBox Ubuntu client avec 1CPU et 2048 MO
+- 1 virtual machine sous VirtualBox **Ubuntu** client avec 1CPU et 2048 MO
 
 **Logiciel**
 
--NMAP version
+- **NMAP** version
 
--NETCAT version
+- **NETCAT** version
 
 # 🧗 Difficultés rencontrées
 <span id="difficultes-rencontrees"></span>
@@ -84,7 +84,7 @@ Création de profils de scan personnalisés
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 
--Partage des VMs
+-Partage des vituals machines
 -Documents et ressources en lignes
 
 # 🚀 Améliorations possibles
