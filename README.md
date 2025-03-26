@@ -54,19 +54,19 @@ Création de profils de scan personnalisés
 
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
-| membre 1 | Technicien | -        |
-| membre 2 | Technicien | -        |
-| membre 3 | PO         | -        |
+| Killian Castillo | Technicien | - Finir rédaction de INSTALL.md, rédaction du script; tests et présentation|
+| Alan Coeurjoly | PO | - Faire le lien avec le client et vérifier la conformité du produit avec les exigences clients, finalisation le USER_GUIDE.md; tests et présentation |
+| Eric Martienne| SM         | - Vérifier que chaque menbre de l'équipe à tous le matériel, finaliser  le README.md; un script avorté ; "relecture de tous les documents" test et présentation |       |
 
 # ⚙️ Choix techniques
 <span id="choix-techniques"></span>
 **Matériel**
 
--1 VM windows serveur 2022 avec 2CPU et 4096 MO
+-1 virtual machine sous VirtualBox windows serveur 2022 avec 2CPU et 4096 MO
 
--1 VM Debian12 serveur avec 1CPU et 2048 MO
+-1 virtual machine sous VirtualBox Debian12 serveur avec 1CPU et 2048 MO
 
--1 VM Ubuntu client avec 1CPU et 2048 MO
+-1 virtual machine sous VirtualBox Ubuntu client avec 1CPU et 2048 MO
 
 **Logiciel**
 
