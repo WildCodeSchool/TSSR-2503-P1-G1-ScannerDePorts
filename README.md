@@ -24,17 +24,17 @@ L'objet est l'utilisation de Nmap et Netcat pour la detection des ports de deux 
 
 _Tâche principale :_
 
-Scanner les ports d’un serveur à partir d’un client
+ - Scanner les ports d’un serveur à partir d’un client
 
-En déduire les failles de sécurité et les attaques possibles
+ - En déduire les failles de sécurité et les attaques possibles
 
-Récupérer le plus d’informations
+ - Récupérer le plus d’informations
 
-Utilisation des logiciels Nmap et Netcat
+ - Utilisation des logiciels Nmap et Netcat
 
 _Objectif secondaire :_
 
-Création de profils de scan personnalisés
+ - Création de profils de scan personnalisés
 
 
 # 📜 **Introduction**
@@ -70,9 +70,9 @@ _**Matériel**_
 
 _**Logiciel**_
 
-- **NMAP** version
+- **NMAP** version 7.94SVN
 
-- **NETCAT** version
+- **NETCAT** version 
 
 # 🧗 **Difficultés rencontrées**
 <span id="difficultes-rencontrees"></span>
@@ -85,13 +85,16 @@ _**Logiciel**_
 <span id="solutions-trouvees"></span>
 
 - Partage des virtuals machines
+  
 - Documents et ressources en lignes
+
+- Comprendre ce que c'et une vulnérabilités
+
+- Partage des virtuals machines
 
 # 🚀 **Améliorations possibles**
 <span id="ameliorations-possibles"></span>
 
 - Vigilance technique sur les vulnérabilités des services.
-
-- Partage des VMs
 
 - Automatisations pour plusieurs scans sur plusieurs serveurs dans un script
