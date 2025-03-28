@@ -56,7 +56,7 @@ _Objectif secondaire :_
 | -------- | ---------- | -------- |
 | Killian **Castillo** | Technicien | - Finir rédaction de INSTALL.md, rédaction du script; tests et présentation|
 | Alan **Coeurjoly** | PO | - Faire le lien avec le client et vérifier la conformité du produit avec les exigences clients, finalisation le USER_GUIDE.md; tests et présentation |
-| Eric **Martienne** | SM         | - Vérifier que chaque menbre de l'équipe à tous le matériel, finaliser  le README.md; un script avorté ; test et présentation |       |
+| Eric **Martienne** | SM         | - Vérifier que chaque membre de l'équipe à tous le matériel, finaliser  le README.md; un script avorté ; test et présentation |       |
 
 # ⚙️ **Choix techniques**
 <span id="choix-techniques"></span>
