@@ -47,7 +47,7 @@ _Objectif secondaire :_
 | Membre   | Rôle       | Missions |
 | -------- | ---------- | -------- |
 | Killian **Castillo** | PO         | -  Faire le lien avec le client et vérifier la conformité du produit avec les exigences clients, installer les VMs et logiciels en local et première rédaction du INSTALL.md|
-| Alan **Coeurjoly** | SM         | - Vérifier que chaque menbre de l'équipe à tous le matériel, installer les VMs et logiciels et première rédaction du USER_GUIDE.md        |
+| Alan **Coeurjoly** | SM         | - Vérifier que chaque membre de l'équipe à tous le matériel, installer les VMs et logiciels et première rédaction du USER_GUIDE.md        |
 | Eric **Martienne** | Technicien | - Installer les VMs et logiciels et première redaction du README.md       |
 
 **Sprint 2**
