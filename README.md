@@ -88,7 +88,7 @@ _**Logiciel**_
   
 - Documents et ressources en lignes
 
-- Comprendre ce que c'et une vulnérabilités
+- Comprendre ce que c'est une vulnérabilité
 
 - Partage des virtuals machines
 
