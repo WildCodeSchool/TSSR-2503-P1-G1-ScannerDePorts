@@ -6,7 +6,7 @@
 - [📜 Introduction](#introduction)
 - [👥 Membres du groupe par sprint](#membres-du-groupe-par-sprint)
 - [⚙️ Choix Techniques](#choix-techniques)
-- [🧗Difficultés rencontrées](#difficultes-rencontrees)
+- [🧗 Difficultés rencontrées](#difficultes-rencontrees)
 - [💡 Solutions trouvées](#solutions-trouvees)
 - [🚀 Améliorations possibles](#ameliorations-possibles)
 
