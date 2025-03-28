@@ -72,7 +72,7 @@ _**Logiciel**_
 
 - **NMAP** version 7.94SVN
 
-- **NETCAT** version 
+- **NETCAT** 
 
 # 🧗 **Difficultés rencontrées**
 <span id="difficultes-rencontrees"></span>
