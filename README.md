@@ -72,14 +72,14 @@ _**Logiciel**_
 
 - **NMAP** version 7.94SVN
 
-- **NETCAT** version 0.7.1
+- **NETCAT** version 
 
 # 🧗 **Difficultés rencontrées**
 <span id="difficultes-rencontrees"></span>
 
-- connection réseau interne
+- Connection réseau interne
 
-- définition des types de scan, et des ports pour définir les vulnérabilités potentiels
+- Définition des types de scan, et des ports pour définir les vulnérabilités potentiels
 
 # 💡 **Solutions trouvées**
 <span id="solutions-trouvees"></span>
