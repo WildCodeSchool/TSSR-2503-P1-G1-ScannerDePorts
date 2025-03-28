@@ -40,6 +40,12 @@ _Objectif secondaire :_
 # 📜 **Introduction**
 <span id="introduction"></span>
 
+Netcat et Nmap sont deux outils incontournables pour l’analyse et le diagnostic des réseaux. Netcat, grâce à sa capacité à lire et écrire des données sur les connexions réseau, permet de tester la disponibilité des services, d’effectuer des transferts de fichiers et même de mettre en place des backdoors. De son côté, Nmap se spécialise dans l’analyse des réseaux, l’identification des hôtes et la détection des vulnérabilités potentielles. Ensemble, ces outils offrent une vision approfondie de l’état d’un réseau et de ses failles de sécurité, facilitant ainsi le dépannage et la protection des infrastructures informatiques.
+
+Dans ce projet, nous allons explorer le fonctionnement de ces logiciels et comprendre comment les utiliser efficacement pour analyser et sécuriser un réseau.
+
+Vous retrouvez plus d'information les documents USER_GUIDE.md et INSTALL.md
+
 # 👥 **Membres du groupe par sprint**
 <span id="membres-du-groupe-par-sprint"></span>
 **Sprint 1**
